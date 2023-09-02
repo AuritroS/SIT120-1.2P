@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Methods</title>
+    <script>
+      function upper() {
+        var text = document.getElementById("text").value;
+        alert(text.toUpperCase());
+      }
+      function lower() {
+        var text = document.getElementById("text").value;
+        alert(text.toLowerCase());
+      }
+      function len() {
+        var text = document.getElementById("text").value;
+        alert(text.length);
+      }
+      function characterAt() {
+        var text = document.getElementById("text").value;
+        var index = document.getElementById("index").value;
+        alert(text.charAt(index));
+      }
+      function replaceString() {
+        var text = document.getElementById("text").value;
+        var find = document.getElementById("findMatch").value;
+        var replace = document.getElementById("replaceMatch").value;
+        alert(text.replace(find, replace));
+      }
+      function sum() {
+        var numone = parseInt(document.getElementById("numone").value);
+        var numtwo = parseInt(document.getElementById("numtwo").value);
+        var result = numone + numtwo;
+        alert(result);
+      }
+      function subtract() {
+        var numone = parseInt(document.getElementById("numone").value);
+        var numtwo = parseInt(document.getElementById("numtwo").value);
+        var result = numone - numtwo;
+        alert(result);
+      }
+      function divide() {
+        var numone = parseInt(document.getElementById("numone").value);
+        var numtwo = parseInt(document.getElementById("numtwo").value);
+        var result = numone / numtwo;
+        alert(result);
+      }
+      function multiply() {
+        var numone = parseInt(document.getElementById("numone").value);
+        var numtwo = parseInt(document.getElementById("numtwo").value);
+        var result = numone * numtwo;
+        alert(result);
+      }
+      function allNum() {
+        var numone = parseInt(document.getElementById("numone").value);
+        let numtwo = parseFloat(
+          document.getElementById("numtwo").value
+        ).toPrecision(2);
+        var result = numone.toString() + parseFloat(numtwo);
+        alert(result);
+      }
+      function arrMethods() {
+        const subjects = [
+          "Math 101",
+          "Science 200",
+          "English 307",
+          "French 192",
+        ];
+        console.log(subjects.length);
+        console.log(subjects.toString());
+        console.log(subjects.join("__--__"));
+        subjects.pop();
+        subjects.push("Computer Science 808");
+        console.log(subjects.toString());
+      }
+      function printDates() {
+        const date = new Date("2023-03-21");
+        console.log(date);
+        console.log(date.getDay());
+        console.log(date.getFullYear());
+        console.log(date.getHours());
+        console.log(date.getTime());
+        console.log(date.getMonth());
+      }
+    </script>
+  </head>
+  <body>
+    <!-- String Methods -->
+    <input type="text" / id="text">
+    <br />
+    <button type="button" onclick="upper()">MAKE UPPER CASE</button>
+    <br />
+    <button type="button" onclick="lower()">make lower case</button>
+    <br />
+    <button type="button" onclick="len()">Get Length</button>
+    <br />
+    <input type="number" name="index" id="index" />
+    <button type="button" onclick="characterAt()">Character At</button>
+    <br />
+    <input type="text" name="findMatch" id="findMatch" />
+    <input type="text" name="replaceMatch" id="replaceMatch" />
+    <button type="button" onclick="replaceString()">Replace</button>
+    <br /><br /><br />
+
+    <!-- Number Methods -->
+    <input type="number" id="numone" />
+    <input type="number" id="numtwo" />
+    <br />
+    <button type="button" onclick="sum()">Sum</button>
+    <br />
+    <button type="button" onclick="subtract()">Subtract</button>
+    <br />
+    <button type="button" onclick="divide()">Divide</button>
+    <br />
+    <button type="button" onclick="multiply()">Multiply</button>
+    <br />
+    <button type="button" onclick="allNum()">allNum</button>
+
+    <!-- Array Methods -->
+    <br />
+    <br /><br /><br />
+    <button type="button" onclick="arrMethods()">Array Methods</button>
+
+    <!-- Date Methods -->
+    <br />
+    <br /><br /><br />
+    <button type="button" onclick="printDates()">Date Methods</button>
+  </body>
+</html>
